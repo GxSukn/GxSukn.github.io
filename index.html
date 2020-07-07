@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-质检步骤" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/07/%E8%B4%A8%E6%A3%80%E6%AD%A5%E9%AA%A4/" class="article-date">
+  <time datetime="2020-07-07T08:39:45.785Z" itemprop="datePublished">2020-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/07/%E8%B4%A8%E6%A3%80%E6%AD%A5%E9%AA%A4/">质检步骤</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><h2 id="根据出窑时间以及车间在quality-inspect-table-t表中拿到质检表ID"><a href="#根据出窑时间以及车间在quality-inspect-table-t表中拿到质检表ID" class="headerlink" title="根据出窑时间以及车间在quality_inspect_table_t表中拿到质检表ID"></a>根据出窑时间以及车间在<code>quality_inspect_table_t</code>表中拿到质检表ID</h2></li>
+<li><h2 id="在通过质检表ID到quality-inspect-table-detail-t中拿到质检信息"><a href="#在通过质检表ID到quality-inspect-table-detail-t中拿到质检信息" class="headerlink" title="在通过质检表ID到quality_inspect_table_detail_t中拿到质检信息"></a>在通过质检表ID到<code>quality_inspect_table_detail_t</code>中拿到质检信息</h2></li>
+<li><h2 id="将质检信息根据等级分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例"><a href="#将质检信息根据等级分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例" class="headerlink" title="将质检信息根据等级分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例"></a>将质检信息根据等级分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例</h2></li>
+<li><h2 id="将根据等级分组后的质检信息根据产品分类分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例"><a href="#将根据等级分组后的质检信息根据产品分类分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例" class="headerlink" title="将根据等级分组后的质检信息根据产品分类分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例"></a>将根据等级分组后的质检信息根据产品分类分组，算出各个父等级的个数以及比例，在算子等级的个数以及比例</h2></li>
+<li><h2 id="在通过质检表ID到quality-inspect-table-detail-param-t中拿到问题参数信息"><a href="#在通过质检表ID到quality-inspect-table-detail-param-t中拿到问题参数信息" class="headerlink" title="在通过质检表ID到quality_inspect_table_detail_param_t中拿到问题参数信息"></a>在通过质检表ID到<code>quality_inspect_table_detail_param_t</code>中拿到问题参数信息</h2></li>
+<li><h2 id="根据子缺陷ID进行分组，并计算出数量以及比例"><a href="#根据子缺陷ID进行分组，并计算出数量以及比例" class="headerlink" title="根据子缺陷ID进行分组，并计算出数量以及比例"></a>根据子缺陷ID进行分组，并计算出数量以及比例</h2></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/07/%E8%B4%A8%E6%A3%80%E6%AD%A5%E9%AA%A4/" data-id="ckcboqenn00024wcp47zbfgtw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-质量分析与员工分析步骤" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/07/%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E4%B8%8E%E5%91%98%E5%B7%A5%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4/" class="article-date">
+  <time datetime="2020-07-07T08:39:45.784Z" itemprop="datePublished">2020-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/07/%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E4%B8%8E%E5%91%98%E5%B7%A5%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4/">质量分析与员工分析步骤</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="员工分析"><a href="#员工分析" class="headerlink" title="员工分析"></a>员工分析</h1><h2 id="跟质量分析大同小异，只是把分类ID或产品ID换成员工ID而已"><a href="#跟质量分析大同小异，只是把分类ID或产品ID换成员工ID而已" class="headerlink" title="跟质量分析大同小异，只是把分类ID或产品ID换成员工ID而已"></a>跟质量分析大同小异，只是把分类ID或产品ID换成员工ID而已</h2><h1 id="质量分析"><a href="#质量分析" class="headerlink" title="质量分析"></a>质量分析</h1><h2 id="注浆部分"><a href="#注浆部分" class="headerlink" title="注浆部分"></a>注浆部分</h2><hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%EF%BC%88%E5%8D%95%E4%BA%A7%E5%93%81%EF%BC%89.assets/image-20200703173808664.png" alt="image-20200703173808664"></h2><ol>
+<li><h4 id="根据产品ID（分类查询则改为关联product-t的分类ID字段）以及车间ID在slipcasting-mould-t表中查询出模具数量、注浆线ID、员工ID以及使用次数"><a href="#根据产品ID（分类查询则改为关联product-t的分类ID字段）以及车间ID在slipcasting-mould-t表中查询出模具数量、注浆线ID、员工ID以及使用次数" class="headerlink" title="根据产品ID（分类查询则改为关联product_t的分类ID字段）以及车间ID在slipcasting_mould_t表中查询出模具数量、注浆线ID、员工ID以及使用次数"></a>根据产品ID（分类查询则改为关联<code>product_t</code>的分类ID字段）以及车间ID在<code>slipcasting_mould_t</code>表中查询出模具数量、注浆线ID、员工ID以及使用次数</h4></li>
+<li><h4 id="根据注浆线ID在slipcasting-t表中查询浆线名"><a href="#根据注浆线ID在slipcasting-t表中查询浆线名" class="headerlink" title="根据注浆线ID在slipcasting_t表中查询浆线名"></a>根据注浆线ID在<code>slipcasting_t</code>表中查询浆线名</h4></li>
+<li><h4 id="根据员工ID在staff-t表中查询员工名（前三步可联合查询）"><a href="#根据员工ID在staff-t表中查询员工名（前三步可联合查询）" class="headerlink" title="根据员工ID在staff_t表中查询员工名（前三步可联合查询）"></a>根据员工ID在<code>staff_t</code>表中查询员工名（前三步可联合查询）</h4></li>
+<li><h4 id="根据产品ID、车间ID、员工ID以及记录日期查询总注浆数量"><a href="#根据产品ID、车间ID、员工ID以及记录日期查询总注浆数量" class="headerlink" title="根据产品ID、车间ID、员工ID以及记录日期查询总注浆数量"></a>根据产品ID、车间ID、员工ID以及记录日期查询总注浆数量</h4></li>
+</ol>
+<h2 id="质检部分"><a href="#质检部分" class="headerlink" title="质检部分"></a>质检部分</h2><hr>
+<p><img src="%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%EF%BC%88%E5%8D%95%E4%BA%A7%E5%93%81%EF%BC%89.assets/image-20200704120116193.png" alt="image-20200704120116193"></p>
+<ol>
+<li><h4 id="通过车间ID和出窑日期在quality-inspect-table-t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality-inspect-table-detail-t表中联合查询出质检信息（质检信息的数量则为出窑坯数）"><a href="#通过车间ID和出窑日期在quality-inspect-table-t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality-inspect-table-detail-t表中联合查询出质检信息（质检信息的数量则为出窑坯数）" class="headerlink" title="通过车间ID和出窑日期在quality_inspect_table_t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality_inspect_table_detail_t表中联合查询出质检信息（质检信息的数量则为出窑坯数）"></a>通过车间ID和出窑日期在<code>quality_inspect_table_t</code>表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在<code>quality_inspect_table_detail_t</code>表中联合查询出质检信息（质检信息的数量则为出窑坯数）</h4></li>
+<li><h4 id="将质检信息根据窑ID分组，然后计算分组后map的长度即窑数"><a href="#将质检信息根据窑ID分组，然后计算分组后map的长度即窑数" class="headerlink" title="将质检信息根据窑ID分组，然后计算分组后map的长度即窑数"></a>将质检信息根据窑ID分组，然后计算分组后map的长度即窑数</h4></li>
+<li><h4 id="将质检信息根据等级分组，算出各个父等级的个数以及比例，再进行子等级分组，再算子等级的个数以及比例"><a href="#将质检信息根据等级分组，算出各个父等级的个数以及比例，再进行子等级分组，再算子等级的个数以及比例" class="headerlink" title="将质检信息根据等级分组，算出各个父等级的个数以及比例，再进行子等级分组，再算子等级的个数以及比例"></a>将质检信息根据等级分组，算出各个父等级的个数以及比例，再进行子等级分组，再算子等级的个数以及比例</h4></li>
+</ol>
+<p><img src="%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%EF%BC%88%E5%8D%95%E4%BA%A7%E5%93%81%EF%BC%89.assets/image-20200704120156161.png" alt="image-20200704120156161"></p>
+<ol>
+<li><h4 id="根据出窑日期以及车间ID在quality-inspect-table-t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality-inspect-table-detail-param-t表中联合查询出缺陷质检信息，这将极大优化了查询缺陷质检信息的速度）"><a href="#根据出窑日期以及车间ID在quality-inspect-table-t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality-inspect-table-detail-param-t表中联合查询出缺陷质检信息，这将极大优化了查询缺陷质检信息的速度）" class="headerlink" title="根据出窑日期以及车间ID在quality_inspect_table_t表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在quality_inspect_table_detail_param_t表中联合查询出缺陷质检信息，这将极大优化了查询缺陷质检信息的速度）"></a>根据出窑日期以及车间ID在<code>quality_inspect_table_t</code>表中查询窑ID，再根据产品ID（分类查询则改为分类ID）跟窑ID在<code>quality_inspect_table_detail_param_t</code>表中联合查询出缺陷质检信息，这将极大优化了查询缺陷质检信息的速度）</h4></li>
+<li><h4 id="将缺陷质检信息根据父问题参数分组，算出各个父问题的个数以及比例，再进行子问题参数分组，再算子问题的个数以及比例"><a href="#将缺陷质检信息根据父问题参数分组，算出各个父问题的个数以及比例，再进行子问题参数分组，再算子问题的个数以及比例" class="headerlink" title="将缺陷质检信息根据父问题参数分组，算出各个父问题的个数以及比例，再进行子问题参数分组，再算子问题的个数以及比例"></a>将缺陷质检信息根据父问题参数分组，算出各个父问题的个数以及比例，再进行子问题参数分组，再算子问题的个数以及比例</h4></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/07/%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E4%B8%8E%E5%91%98%E5%B7%A5%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4/" data-id="ckcboqeo100034wcp465fgdcd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-sukn" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/07/sukn/" class="article-date">
+  <time datetime="2020-07-07T08:39:21.000Z" itemprop="datePublished">2020-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/07/sukn/">sukn</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/07/sukn/" data-id="ckcboqenl00014wcphoki375k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/07/hello-world/" class="article-date">
+  <time datetime="2020-07-07T08:35:39.589Z" itemprop="datePublished">2020-07-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/07/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/07/hello-world/" data-id="ckcboqenh00004wcpdzfqe9ck" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/07/%E8%B4%A8%E6%A3%80%E6%AD%A5%E9%AA%A4/">质检步骤</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/07/%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E4%B8%8E%E5%91%98%E5%B7%A5%E5%88%86%E6%9E%90%E6%AD%A5%E9%AA%A4/">质量分析与员工分析步骤</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/07/sukn/">sukn</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
